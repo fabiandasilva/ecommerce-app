@@ -1,0 +1,36 @@
+header {
+	background-color: white;
+	position: fixed;
+	width: 100%;
+	padding: 1rem;
+	z-index: 1;
+
+	.navbar {
+		@include flex(row, nowrap, space-between, flex-start);
+		padding: 1rem;
+
+		&__info {
+			width: 30rem;
+			line-height: 2.2rem;
+
+			i {
+				width: 3.2rem;
+				text-align-last: center;
+			}
+		}
+
+		&__icons {
+			@include flex(row, nowrap, right, center);
+			width: 30rem;
+
+			.navbar__user {
+				margin-right: 1rem;
+				cursor: pointer;
+			}
+
+			.navbar__cart {
+				cursor: pointer;
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+/*************
+ *Tipografia*
+ *************/
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@font-face {
+	font-family: "Bold";
+	src: url("../../assets/fonts//bold.otf");
+}
+body,
+input,
+button {
+	font-family: "Bold", sans-serif;
+}
+
+h1 {
+	color: black;
+	font-size: 5rem;
+	text-transform: uppercase;
+}
+nav,
+footer {
+	a,
+	p,
+	span {
+		color: black;
+		font: {
+			size: 1.5rem;
+			weight: 700;
+		}
+		letter-spacing: 0.1rem;
+		text-decoration: none;
+	}
+	i {
+		color: black;
+		font-size: 1.6rem;
+		padding: 0 0.6rem;
+	}
+     img{
+          width:10rem;
+     }
+}

@@ -1,0 +1,95 @@
+/* Reseteo */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+* {
+  font-size: 62.5%;
+  list-style: none; }
+
+body {
+  overflow: overlay; }
+  body::-webkit-scrollbar {
+    width: 1.2rem;
+    background-color: transparent; }
+  body::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 0.5rem 0.5 black;
+    border: solid 0.4rem transparent; }
+
+/*************
+ *Tipografia*
+ *************/
+@font-face {
+  font-family: "Bold";
+  src: url("../../assets/fonts//bold.otf"); }
+
+body,
+input,
+button {
+  font-family: "Bold", sans-serif; }
+
+h1 {
+  color: black;
+  font-size: 5rem;
+  text-transform: uppercase; }
+
+nav a,
+nav p,
+nav span,
+footer a,
+footer p,
+footer span {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-decoration: none; }
+
+nav i,
+footer i {
+  color: black;
+  font-size: 1.6rem;
+  padding: 0 0.6rem; }
+
+nav img,
+footer img {
+  width: 10rem; }
+
+/*******
+*Mixins*
+*******/
+header {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  padding: 1rem;
+  z-index: 1; }
+  header .navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem; }
+    header .navbar__info {
+      width: 30rem;
+      line-height: 2.2rem; }
+      header .navbar__info i {
+        width: 3.2rem;
+        text-align-last: center; }
+    header .navbar__icons {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: right;
+      align-items: center;
+      width: 30rem; }
+      header .navbar__icons .navbar__user {
+        margin-right: 1rem;
+        cursor: pointer; }
+      header .navbar__icons .navbar__cart {
+        cursor: pointer; }
