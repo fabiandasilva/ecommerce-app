@@ -1,67 +1,46 @@
-class Producto {
-	static impuesto_IVA = 1.21;
+function escribirListaDeProductos(productos) {
+	const listaDeProductos = document.getElementById('ListaDeProductos');
 
-	constructor(nombre, precio) {
-		this.nombre = nombre[0].toUpperCase() + nombre.slice(1);
-		this.precio = parseFloat(precio);
-	}
+	if (productos.length) {
+		listaDeProductos.innerHTML = '';
 
-	precioConIVA() {
-		return this.precio * Producto.impuesto_IVA;
-	}
+		for (const producto of productos) {
+			const contenedorProducto = document.createElement('li');
 
-	obtenerInfo() {
-		return (
-			`Producto: ${this.nombre}, ` +
-			`precio: $${this.precioConIVA()}  (IVA incluido)\n`
-		);
+			contenedorProducto.innerHTML = `		  
+		   <p>Producto: ${producto.nombre}</p>
+		   <p>Precio: $${producto.precio}</p>
+		   <br/>
+		   <br/>
+		   <br/>
+		   <br/>
+	    `;
+
+			listaDeProductos.append(contenedorProducto);
+		}
+	} else {
+		listaDeProductos.innerHTML = 'No se encontró ningún producto';
 	}
 }
 
-const productos = [];
+const productos = [
+	{id: 1, nombre: 'Remera', precio: 20000},
+	{id: 2, nombre: 'Pantalon', precio: 23000},
+	{id: 3, nombre: 'Hoddie', precio: 45000},
+];
 
-productos.push(new Producto('Mesa', 20000));
-productos.push(new Producto('Cama', 24000));
-productos.push(new Producto('Parrilla', 50000));
-productos.push(new Producto('Juego de sillones', 45000));
-productos.push(new Producto('Ropero', 30000));
-productos.push(new Producto('Esquinero', 3500));
-productos.push(new Producto('Marcos de fotos', 1500));
-productos.push(new Producto('Cajonera', 23000));
+escribirListaDeProductos(productos);
 
-let listadoDeProductos = 'Listado de productos:\n\n';
+let enviar = document.getElementById('enviar');
 
-productos.forEach((producto) => {
-	listadoDeProductos += producto.obtenerInfo();
+enviar.addEventListener('click', (event) => {
+	event.preventDefault();
+
+	const buscarTexto = event.target.parentElement.texto.value.toLowerCase();
+
+	escribirListaDeProductos(
+		productos.filter((producto) =>
+			producto.nombre.toLowerCase().includes(buscarTexto)
+		)
+	);
 });
-
-alert(listadoDeProductos);
-
-// Filtro
-const precioDesde = Number(prompt('Buscar muebles con precio desde: ($)'));
-
-const productosDesde = productos.filter(
-	(producto) => producto.precioConIVA() >= precioDesde
-);
-
-let listadoFiltrado = '';
-
-productosDesde.length > 0
-	? productosDesde.forEach((producto) => {
-			listadoFiltrado += producto.obtenerInfo();
-	  })
-	: (listadoFiltrado = 'No existen productos dentro del rango especificado.');
-alert(listadoFiltrado);
-
-// Buscador
-const busqueda = prompt('Buscar producto por nombre:');
-
-const productoFiltrado = productos.find(
-	(producto) => producto.nombre.toLowerCase() === busqueda.toLowerCase()
-);
-
-if (productoFiltrado) {
-	alert(productoFiltrado.obtenerInfo());
-} else {
-	alert(`No se encontró ningún producto: ${busqueda}`);
-}

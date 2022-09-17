@@ -93,3 +93,17 @@ header {
         cursor: pointer; }
       header .navbar__icons .navbar__cart {
         cursor: pointer; }
+
+/* estilos para la entrega */
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; }
+  main h3, main p {
+    font-size: 2rem; }
+  main .formulario {
+    align-items: center;
+    font-size: 5rem; }
