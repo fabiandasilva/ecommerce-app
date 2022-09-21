@@ -94,16 +94,47 @@ header {
       header .navbar__icons .navbar__cart {
         cursor: pointer; }
 
+/* HEADER */
+.hero {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  padding: 8.9rem 0 0 8.9rem; }
+  .hero h1 {
+    color: #ffffff;
+    font-size: 5.6rem;
+    font-weight: 800;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1rem; }
+  .hero__video {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: fill; }
+
 /* estilos para la entrega */
-main {
+.section {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   width: 100%; }
-  main h3, main p {
+  .section h3,
+  .section p {
     font-size: 2rem; }
-  main .formulario {
+  .section .formulario {
     align-items: center;
     font-size: 5rem; }

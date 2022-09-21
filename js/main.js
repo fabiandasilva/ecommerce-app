@@ -1,3 +1,4 @@
+ 
 function escribirListaDeProductos(productos) {
 	const listaDeProductos = document.getElementById('ListaDeProductos');
 

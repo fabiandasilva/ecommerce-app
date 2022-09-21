@@ -3,17 +3,20 @@
 @import './base/type';
 
 @import './abstracts/_mixins';
+@import "./abstracts/variables";
 
 @import './components/_nav';
+@import './components/hero';
 
 /* estilos para la entrega */
 
-main {
+.section {
 	@include flex(column, nowrap, space-between, center);
 
 	width: 100%;
-	
-	h3,p  {
+
+	h3,
+	p {
 		font-size: 2rem;
 	}
 	.formulario {

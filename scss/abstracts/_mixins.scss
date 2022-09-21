@@ -11,4 +11,17 @@
 	justify-content: $justify;
 	align-items: $align;
 }
- 
+
+@mixin subtitle($color, $align) {
+	color: $color;
+	font: {
+		size: 5.6rem;
+		weight: $extra-bold;
+	}
+	text: {
+		align: $align;
+		transform: uppercase;
+		decoration: none;
+	}
+	letter-spacing: 0.1rem;
+}
