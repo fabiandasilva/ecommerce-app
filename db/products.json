@@ -1,0 +1,93 @@
+[
+     {
+          "id": 1,
+          "name": "COTE",
+          "price": 4580,
+          "img": "https://res.cloudinary.com/dew1za4wz/image/upload/v1663875764/plants/batuk/remeras-chombas/COTEENT_yyckaw.jpg",
+          "collection": "Remera",
+          "category": "Remera",
+          "color": "Blanco",
+          "description": "Remera con dobladillo atracado en mangas cortas, y cuello redondo.",
+          "dimensions": "S al XXL",
+          "composition": "100% algodon",
+          "newIn": false
+     },
+     {
+          "id": 2,
+          "name": "RIDE",
+          "price": 4580,
+          "img": "https://res.cloudinary.com/dew1za4wz/image/upload/v1663875766/plants/batuk/remeras-chombas/FVMED_nqeqqz.jpg",
+          "collection": "Remera",
+          "category": "Remera",
+          "color": "Blanco",
+          "description": "Remera con dobladillo atracado en mangas cortas, y cuello redondo.",
+          "dimensions": "S al XXL",
+          "composition": "100% algodon",
+          "newIn": true
+     },
+     {
+          "id": 2,
+          "name": "ASTRO",
+          "price": 4580,
+          "img": "https://res.cloudinary.com/dew1za4wz/image/upload/v1663875775/plants/batuk/remeras-chombas/ASTROMED_l9qzz7.jpg",
+          "collection": "Remera",
+          "category": "Remera",
+          "color": "Azul, Negro",
+          "description": "Remera con dobladillo atracado en mangas cortas, y cuello redondo.",
+          "dimensions": "S al XXL",
+          "composition": "100% algodon",
+          "newIn": true
+     },
+     {
+          "id": 3,
+          "name": "EVEN",
+          "price": 4580,
+          "img": "https://res.cloudinary.com/dew1za4wz/image/upload/v1663875764/plants/batuk/remeras-chombas/LILAMED_ofiujf.jpg",
+          "collection": "Remera",
+          "category": "Remera",
+          "color": "Violeta, Negro, Militar, Petroleo, Azul",
+          "description": "Remera con dobladillo atracado en mangas cortas, y cuello redondo.",
+          "dimensions": "S al XXL",
+          "composition": "100% algodon",
+          "newIn": false
+     },
+     {
+          "id": 4,
+          "name": "FOOD",
+          "price": 4380,
+          "img": "https://res.cloudinary.com/dew1za4wz/image/upload/v1663875764/plants/batuk/remeras-chombas/LILAMED_ofiujf.jpg",
+          "collection": "Remera",
+          "category": "Remera",
+          "color": "Negro",
+          "description": "Remera con dobladillo atracado en mangas cortas, y cuello redondo.",
+          "dimensions": "S al XXL",
+          "composition": "100% algodon",
+          "newIn": true
+     },
+     {
+          "id": 4,
+          "name": "FRUIT",
+          "price": 4580,
+          "img": "https://res.cloudinary.com/dew1za4wz/image/upload/v1663875764/plants/batuk/remeras-chombas/FRESHMED-1_vanwru.jpg",
+          "collection": "Remera",
+          "category": "Remera",
+          "color": "Blanco",
+          "description": "Remera con dobladillo atracado en mangas cortas, y cuello redondo.",
+          "dimensions": "S al XXL",
+          "composition": "100% algodon",
+          "newIn": true
+     },
+     {
+          "id": 5,
+          "name": "FRUIT",
+          "price": 4580,
+          "img": "https://res.cloudinary.com/dew1za4wz/image/upload/v1663875764/plants/batuk/remeras-chombas/FRESHMED-1_vanwru.jpg",
+          "collection": "Remera",
+          "category": "Remera",
+          "color": "Blanco",
+          "description": "Remera con dobladillo atracado en mangas cortas, y cuello redondo.",
+          "dimensions": "S al XXL",
+          "composition": "100% algodon",
+          "newIn": true
+     }
+]
