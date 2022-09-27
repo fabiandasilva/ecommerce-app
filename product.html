@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			src="https://kit.fontawesome.com/aab291df05.js"
+			crossorigin="anonymous"
+		></script>
+
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>Batuk</title>
+	</head>
+	<body>
+		<!-- APERTURA HEADER -->
+		<header>
+			<nav>
+				<div class="navbar">
+					<ul class="navbar__info">
+						<li>
+							<a href="./index.html"><i class="fas fa-home"></i> Home</a>
+						</li>
+						<li>
+							<a href="./index.html#/tienda"
+								><i class="fas fa-shopping-bag"></i> Colección</a
+							>
+						</li>
+					</ul>
+					<a href="./index.html"
+						><img
+							src="./assets/img/logo.svg"
+							alt="Batuk"
+					/></a>
+					<ul class="navbar__icons">
+						<li id="toggle-form-btn" class="navbar__user">
+							<i class="far fa-paper-plane"></i>
+							<span id="greeting"></span>
+						</li>
+						<li id="toggle-cart" class="navbar__cart">
+							<i class="fas fa-shopping-cart"></i>
+							<span id="cart-item-count"></span>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		-->
+		<!-- APERTURA CART -->
+		<aside id="cart-overlay" class="cart">
+			<i id="close-cart" class="fas fa-times close"></i>
+			<h2>Tu carrito</h2>
+			<div id="cart-items">
+				<!-- informacion renderizada -->
+			</div>
+			<div id="cart-total" class="cart__price">
+				<!-- informacion renderizada -->
+			</div>
+			<div id="checkout" class="cart__checkout">
+				<button class="black-button">Finalizar compra</button>
+			</div>
+		</aside>
+		<!-- CIERRE CART -->
+
+		<!-- APERTURA NOTIFICACIONES -->
+		<section id="notifications">
+			<!-- contenido renderizado (formularios) -->
+		</section>
+		<!-- CIERRE NOTIFICACIONES -->
+
+		<!-- APERTURA BREADCRUMBS -->
+		<section id="breadcrumbs" class="breadcrumbs">
+			<!-- informacion renderizada -->
+		</section>
+		<!-- CIERRE BREADCRUMBS -->
+
+		<!-- APERTURA PRODUCT DETAIL -->
+		<main id="product-detail" class="product">
+			<!-- informacion renderizada -->
+		</main>
+		<!-- CIERRE PRODUCT DETAIL -->
+
+		<!-- APERTURA NEW IN -->
+		<section class="store">
+			<h2>Novedades</h2>
+			<div id="new-in">
+				<!-- informacion renderizada -->
+			</div>
+		</section>
+		<!-- CIERRE NEW IN -->
+		<script src="./js/spa/homePage.js"></script>
+		<!-- <script src="./js/main.js"></script> -->
+	</body>
+</html>

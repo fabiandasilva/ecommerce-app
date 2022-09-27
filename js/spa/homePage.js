@@ -1,6 +1,7 @@
 /* DOM HERO */
 
-const homePage = () => {
+const renderHome = () => {
+	/* DOM VISTA HERO */
 	const spa = document.getElementById('spa');
 
 	const heroSection = document.createElement('section');
@@ -12,6 +13,38 @@ const homePage = () => {
  </video>
      `;
 	spa.appendChild(heroSection);
+
+	/* DOM VISTA NOVEDADES */
+	const newInSection = document.createElement('section');
+	newInSection.classList.add('store');
+	newInSection.innerHTML = `
+	    <h2>Novedades</h2>
+	    <div id="newIn">
+		   <!-- productos renderizados -->
+		   <h2>Aca los productos novedosos </h2>
+	    </div>
+	`;
+	spa.appendChild(newInSection);
+
+	/* DOM RENDER PRODUCTOS-NOVEDADES */
+
+	// DOM SLIDER
+
+	const sliderSection = document.createElement('section');
+	sliderSection.classList.add('slider');
+	sliderSection.innerHTML = `
+	    <h2>Descubrí la colección</h2>
+	    <div class="slider__slide">
+		   <img src="../../assets/img/index/slide.png" alt="Nueva temporada">
+		   <div class="overlay__content">
+			  <div class="overlay__buttons">
+				 <a href="#/tienda" >Ver nuestra tienda</a>
+			  </div>
+		   </div>
+	    </div>
+	`;
+	spa.appendChild(sliderSection);
 };
 
-homePage();
+/* Export */
+export default renderHome;

@@ -1,6 +1,6 @@
-/*******
-*Mixins*
-*******/
+// -------------------- MIXINS
+
+// flex principal
 
 @mixin flex($direction, $wrap, $justify, $align) {
 	display: flex;
@@ -12,10 +12,12 @@
 	align-items: $align;
 }
 
-@mixin subtitle($color, $align) {
+// titulo
+
+@mixin title($color, $align) {
 	color: $color;
 	font: {
-		size: 5.6rem;
+		size: 3.6rem;
 		weight: $extra-bold;
 	}
 	text: {
@@ -24,4 +26,160 @@
 		decoration: none;
 	}
 	letter-spacing: 0.1rem;
+}
+
+// subtitulo
+
+@mixin subtitle($color, $align) {
+	color: $color;
+	font: {
+		size: 1.5rem;
+		weight: $extra-bold;
+	}
+	text: {
+		align: $align;
+		transform: uppercase;
+		decoration: none;
+	}
+	letter-spacing: 0.1rem;
+}
+
+// destacado
+
+@mixin highlight($align) {
+	color: $grey-400;
+	font: {
+		size: 1.2rem;
+		weight: $extra-bold;
+	}
+	text: {
+		align: $align;
+		decoration: none;
+	}
+	letter-spacing: 0.05rem;
+}
+
+// parrafo
+
+@mixin paragraph($color, $align, $width) {
+	color: $color;
+	font: {
+		size: 1.2rem;
+		weight: $regular;
+	}
+	text: {
+		align: $align;
+		decoration: none;
+	}
+	letter-spacing: 0.1rem;
+	line-height: 1.5;
+	max-width: $width;
+}
+
+// flex detalle
+
+@mixin flex-detail($color) {
+	padding-top: 2rem;
+	h3,
+	h3 a,
+	strong {
+		@include subtitle($color, center);
+	}
+	h4 {
+		@include highlight(center);
+	}
+	p,
+	span,
+	label {
+		@include paragraph($color, center, none);
+	}
+}
+
+// icon
+
+@mixin icon($color, $size) {
+	color: $color;
+	font-size: $size;
+	padding: 0.6rem;
+}
+
+// boton con texto
+
+@mixin button-text($color, $padding-top, $align) {
+	padding-top: $padding-top;
+	padding-bottom: 1.2rem;
+	text-align: $align;
+
+	h3 a,
+	a,
+	button {
+		color: $color;
+		font: {
+			size: 1.2rem;
+			weight: $regular;
+		}
+		text: {
+			align: center;
+			transform: uppercase;
+			decoration: none;
+		}
+		letter-spacing: 0.1rem;
+		border: 1px solid $color;
+		padding: 1.2rem 2.4rem;
+		background-color: transparent;
+		cursor: pointer;
+	}
+}
+
+// boton con icono
+
+@mixin button-icon($color) {
+	@include flex(row, wrap, space-evenly, center);
+
+	a,
+	button {
+		color: $color;
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+
+		i {
+			font-size: 2rem;
+		}
+	}
+}
+
+// imagenes con transiciones
+
+@mixin overlay__content($color) {
+	position: relative;
+
+	.overlay__content {
+		@include flex(row, wrap, center, center);
+
+		color: black;
+		background-color: $color;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transition: opacity 0.25s;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		& > * {
+			transform: translateY(2rem);
+			transition: transform 0.25s;
+			width: 90%;
+		}
+
+		&:hover > * {
+			transform: translateY(0);
+			width: 90%;
+		}
+	}
 }

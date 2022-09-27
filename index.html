@@ -39,29 +39,28 @@
 				</ul>
 			</nav>
 		</header>
-		-->
+
 		<!-- APERTURA MAIN -->
 		<main id="spa">
 			<!-- contenido renderizado (single page application) -->
-		</main>
-		<section class="section">
-			<h3>Busque su articulo:</h3>
-			<form action="" id="formulario" class="formulario">
-				<input
-					type="text"
-					name="texto"
-					id=""
-					placeholder="Ingrese su articulo"
-				/>
-				<input type="submit" value="Buscar" name="enviar" id="enviar" />
-			</form>
+			<section class="catalogo">
+				<h2>Listado de muebles</h2>
+				<form class="buscador">
+					<h3>Buscar artículo:</h3>
+					<input type="text" name="texto" placeholder="Nombre" />
+					<button id="BotonBuscar">Buscar</button>
+				</form>
+				<ul id="Productos"></ul>
+			</section>
 
-			<article>
-				<ul id="ListaDeProductos"></ul>
-			</article>
-		</section>
+			<aside class="carrito">
+				<h2>Carrito</h2>
+				<ul id="Carrito"></ul>
+			</aside>
+		</main>
+
 		<!-- CIERRE MAIN -->
-		<script src="./js/spa/homePage.js"></script>
-		<script src="./js/main.js"></script>
+		<!--! ↧ ↧ ↧ ↧  con este js tengo problemas al renderizar los productos  ↧ ↧ ↧ ↧ -->
+		<script type="module" src="./js/index.js"></script>
 	</body>
 </html>

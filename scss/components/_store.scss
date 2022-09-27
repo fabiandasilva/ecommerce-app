@@ -1,0 +1,180 @@
+.store {
+	max-width: 114rem;
+	margin: auto;
+	padding: 0 2rem;
+
+	@media (min-width: 1200px) {
+		padding: 0;
+	}
+
+	h2 {
+		@include title($black, center);
+		padding: 5rem 0;
+	}
+
+	.classification {
+		display: none;
+
+		@media (min-width: 576px) {
+			@include flex(row, nowrap, space-between, center);
+			@include flex-detail($black);
+			padding-top: 8.8rem;
+		}
+
+		h1 {
+			@include title($black, center);
+		}
+
+		&__elements {
+			@include flex(row, nowrap, space-between, center);
+			padding: 5rem 0;
+
+			.quantity {
+				width: 8rem;
+			}
+
+			i {
+				@include icon(black, 1.6rem);
+				padding: 0 1rem;
+			}
+		}
+	}
+
+	&__content {
+		@include flex(column, nowrap, space-between, flex-start);
+
+		@media (min-width: 576px) {
+			display: grid;
+			grid-template-columns: 17rem auto;
+		}
+
+		.filter {
+			display: none;
+
+			@media (min-width: 576px) {
+				display: inherit;
+				padding-right: 2rem;
+			}
+
+			&__type {
+				padding-bottom: 1.5rem;
+
+				span {
+					@include subtitle(black, left);
+				}
+
+				form {
+					padding: 1rem 0;
+				}
+
+				.filter__category,
+				.filter__color {
+					@include flex(column, nowrap, space-between, flex-start);
+					padding: 0.5rem;
+
+					button {
+						@include paragraph(black, left, none);
+						text-transform: capitalize;
+						background-color: transparent;
+						border: none;
+						padding: 0.5rem;
+						cursor: pointer;
+					}
+				}
+
+				.filter__price {
+					@include flex(column, nowrap, left, flex-start);
+
+					input {
+						margin-bottom: 0;
+					}
+
+					p {
+						@include paragraph(black, left, none);
+					}
+				}
+			}
+		}
+	}
+
+	#new-in,
+	#essential,
+	#collection {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 2rem;
+
+		.error {
+			@include flex(column, nowrap, flex-start, center);
+			position: absolute;
+			top: 50rem;
+			left: 0rem;
+			width: 100%;
+
+			span {
+				@include paragraph(black, center, 20rem);
+			}
+			i {
+				@include icon(black, 3rem);
+			}
+		}
+
+		.card {
+			@include flex(column, nowrap, flex-start, center);
+
+			.overlay__item {
+				@include overlay__content(rgba(0, 0, 0, 0.6));
+				img {
+					width: 100%;
+				}
+				.overlay__buttons {
+					@include button-icon(white);
+					padding: 4rem;
+
+					@media (min-width: 576px) {
+						padding: 0;
+					}
+					@media (min-width: 992px) {
+						padding: 4rem;
+					}
+				}
+			}
+
+			.card__detail {
+				@include flex-detail($black);
+				padding-bottom: 2rem;
+			}
+		}
+	}
+
+	#new-in,
+	#essential {
+		@media (min-width: 576px) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+
+	#collection {
+		@media (max-width: 575px) {
+			padding-top: 11rem;
+		}
+
+		@media (min-width: 576px) {
+			@media (min-width: 768px) {
+				grid-template-columns: repeat(3, 1fr);
+			}
+			@media (min-width: 992px) {
+				grid-template-columns: repeat(4, 1fr);
+			}
+		}
+	}
+}
+
+#new {
+	@include button-text(black, 1.2rem, left);
+	p {
+		@include paragraph(black, left, 20rem);
+		display: inline-block;
+		padding-bottom: 1rem;
+	}
+}

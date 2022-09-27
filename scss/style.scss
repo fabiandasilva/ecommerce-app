@@ -3,10 +3,14 @@
 @import './base/type';
 
 @import './abstracts/_mixins';
-@import "./abstracts/variables";
+@import './abstracts/variables';
 
 @import './components/_nav';
 @import './components/hero';
+
+@import './layout/_store';
+@import './components/_slider';
+@import "./components/_store";
 
 /* estilos para la entrega */
 
