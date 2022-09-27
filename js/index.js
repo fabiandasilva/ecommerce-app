@@ -1,4 +1,4 @@
-import renderCollection from './storePage.js';
+import renderCollection from './spa/storePage.js';
 import renderHome from './spa/homePage.js';
 
 // renderizar las paginas home y collection

@@ -350,7 +350,7 @@ const renderCollection = () => {
 		},
 	];
 
-	const contenedorProductos = document.getElementById('collection');
+	const contenedorProductos = document.getElementById('spa');
 	console.log(contenedorProductos);
 	/! Aca tengo problema, queria que todo esto las cards se me renderice en la etiqueta que cree en la linea 71 que esta mas arriba /
 	data.forEach((producto) => {
