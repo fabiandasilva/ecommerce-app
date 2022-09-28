@@ -205,6 +205,8 @@ header {
   max-width: 114rem;
   margin: auto;
   padding: 0 2rem; }
+  .store img {
+    width: 20%; }
   @media (min-width: 1200px) {
     .store {
       padding: 0; } }

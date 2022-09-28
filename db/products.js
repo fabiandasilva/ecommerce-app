@@ -1,4 +1,4 @@
- let data = [
+  let data = [
 	{
 		id: 1,
 		name: 'COTE',
@@ -272,4 +272,4 @@
 		newIn: false,
 	},
 ];
- 
+ export default data;
