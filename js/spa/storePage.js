@@ -71,13 +71,13 @@ const renderCollection = () => {
 
 	const collectionSection = document.createElement('section');
 
-	collectionSection.classList.add('collection');
+	collectionSection.setAttribute('id', 'collection');
 	containerSection.append(collectionSection);
 
 	storeSection.appendChild(containerSection);
 	spa.appendChild(storeSection);
 
-	const renderContainer = document.getElementsByClassName('collection')[0];
+	const renderContainer = document.getElementById('collection');
 
 	data.forEach((producto) => {
 		const card = document.createElement('div');
