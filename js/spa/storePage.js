@@ -82,11 +82,27 @@ const renderCollection = () => {
 	data.forEach((producto) => {
 		const card = document.createElement('div');
 		card.classList.add('card');
-		card.innerHTML = `
+		card.innerHTML = `   
+     
+     <div class="overlay__item">
      <img src=${producto.img} alt="" class="overlay__item">
-     <h3>${producto.name}</h3>
-     <p>${producto.price}</p>
-     <p>${producto.color}</p>
+         <div class="overlay__content">
+             <div class="overlay__buttons">
+                 <a href="product.html?id=${producto.id}">
+                     <i class="fas fa-search"></i>
+                 </a>
+                 <button class="overlay__cart" data-id="${producto.id}">
+                     <i class="fas fa-cart-plus"></i>
+                 </button>
+             </div>
+         </div>
+     </div>
+     <div class="card__detail">
+         <h3><a href="product.html?id=${producto.id}">${producto.category} ${producto.name}</a></h3>
+         <p>$${producto.price}</p>
+     </div>
+ </div>
+     
      `;
 		renderContainer.appendChild(card);
 	});

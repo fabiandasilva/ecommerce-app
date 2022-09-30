@@ -271,5 +271,15 @@
 		size: false,
 		newIn: false,
 	},
+	{
+		id: 25,
+		name: 'MINT',
+		price: 6780,
+		img: 'https://res.cloudinary.com/dew1za4wz/image/upload/v1663875735/plants/batuk/pantalones/campeenttmint_e8usrf.jpg',
+		category: 'Pantalon',
+		color: 'Celeste, Beige, Crema, Amarillo',
+		size: false,
+		newIn: false,
+	},
 ];
  export default data;
