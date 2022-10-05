@@ -8,7 +8,7 @@ window.addEventListener("load", async function () {
     const urlID = this.window.location.search;
     try {
         const response = await this.fetch(data)
-        const products = await response.json()
+        const products = await response.json()      
 
         const singleProduct = products.filter(
             (product) => `?id=${product.id}` === urlID
