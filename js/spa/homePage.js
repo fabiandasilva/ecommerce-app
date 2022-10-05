@@ -1,32 +1,29 @@
 /* DOM HERO */
 
-const renderHome = () => {
+ const renderHome = () => {
 	/* DOM VISTA HERO */
 	const spa = document.getElementById('spa');
-
 	const heroSection = document.createElement('section');
 	heroSection.classList.add('hero');
 	heroSection.innerHTML = `
-     <h1>BATUK ORIGINS</h1>
-     <video class="hero__video" autoplay muted loop>
-          <source src="../../assets/video/batuk.mp4" type="video/mp4">
- </video>
-     `;
+     		<h1>BATUK ORIGINS</h1>
+      <video class="hero__video" autoplay muted loop>
+           <source src="../../assets/video/batuk.mp4" type="video/mp4">
+  </video>
+      `;
 	spa.appendChild(heroSection);
-
 	/* DOM VISTA NOVEDADES */
 	const newInSection = document.createElement('section');
 	newInSection.classList.add('store');
 	newInSection.innerHTML = `
-	    <h2>Novedades</h2>
-	    <div id="newIn">
-		   <!-- productos renderizados -->
-		   <h2>Aca los productos novedosos </h2>
-	    </div>
-	`;
+      <h2>Novedades</h2>
+      <div id="newIn">
+     <!-- productos renderizados -->
+     <h2>Aca los productos novedosos </h2>
+      </div>
+  `;
 	spa.appendChild(newInSection);
-
-	/* DOM RENDER PRODUCTOS-NOVEDADES */
+	 
 
 	// DOM SLIDER
 
@@ -46,5 +43,7 @@ const renderHome = () => {
 	spa.appendChild(sliderSection);
 };
 
-/* Export */
+  
+ 
+
 export default renderHome;
