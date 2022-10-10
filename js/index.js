@@ -1,57 +1,55 @@
-import renderCollection from './spa/storePage.js';
+import renderCollection from './spa/storePage.js'
 
-import renderHome from './spa/homePage.js';
+import renderHome from './spa/homePage.js'
 
-const spa = document.getElementById('spa');
-
+const spa = document.getElementById('spa')
 
 // renderizar las paginas home y collection
 
 const renderHomePage = () => {
-  while (spa.firstChild) spa.removeChild(spa.firstChild);
-  renderHome();
-};
+  while (spa.firstChild) spa.removeChild(spa.firstChild)
+  renderHome()
+}
 
 const renderCollectionPage = () => {
-  while (spa.firstChild) spa.removeChild(spa.firstChild);
-  renderCollection();
-};
+  while (spa.firstChild) spa.removeChild(spa.firstChild)
+  renderCollection()
+}
 // rutas
 
 const routes = [
   { path: '/', action: 'showHomePage' },
-  { path: '/tienda', action: 'showCollectionPage' },
-];
+  { path: '/tienda', action: 'showCollectionPage' }
+]
 
-// path, action
-
-const findPath = () => location.hash.slice(1).toLowerCase() || '/';
-const findActionByPath = (path) => routes.find((route) => route.path === path || undefined);
+// eslint-disable-next-line no-undef
+const findPath = () => location.hash.slice(1).toLowerCase() || '/'
+const findActionByPath = (path) => routes.find((route) => route.path === path || undefined)
 
 const router = () => {
-  const path = findPath();
-  const route = findActionByPath(path, routes);
+  const path = findPath()
+  const route = findActionByPath(path, routes)
   switch (route.action) {
     case 'showHomePage':
-      renderHomePage();
-      break;
+      renderHomePage()
+      break
     case 'showCollectionPage':
-      renderCollectionPage();
-      break;
+      renderCollectionPage()
+      break
     default:
-      console.error('Ruta inexistente.');
-      break;
+      console.error('Ruta inexistente.')
+      break
   }
-};
+}
 
 // ejecutar funcion cuando la ventana se haya cargado
 
-window.onload = function onload() {
-  router();
-};
+window.onload = function onload () {
+  router()
+}
 
 // ejecutar funcion cuando cambie la almohadilla de la url
 
-window.onhashchange = function onhashchange() {
-  router();
-};
+window.onhashchange = function onhashchange () {
+  router()
+}

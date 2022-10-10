@@ -1,29 +1,28 @@
-const data = "../../db/data.json"
+const data = '../../db/data.json'
 
-const breadcrumbs = document.getElementById("breadcrumbs")
-const productDetail = document.getElementById("product-detail")
+const breadcrumbs = document.getElementById('breadcrumbs')
+const productDetail = document.getElementById('product-detail')
 
+window.addEventListener('load', async function () {
+  const urlID = this.window.location.search
+  try {
+    const response = await this.fetch(data)
+    const products = await response.json()
 
-window.addEventListener("load", async function () {
-    const urlID = this.window.location.search;
-    try {
-        const response = await this.fetch(data)
-        const products = await response.json()      
+    const singleProduct = products.filter(
+      (product) => `?id=${product.id}` === urlID
+    )
+    singleProduct.forEach((product) => {
+      document.title = `${product.name.toUpperCase()} lalala`
 
-        const singleProduct = products.filter(
-            (product) => `?id=${product.id}` === urlID
-        );
-        singleProduct.forEach((product) => {
-            document.title = `${product.name.toUpperCase()} lalala`
-
-            breadcrumbs.innerHTML = `
+      breadcrumbs.innerHTML = `
             <ul>
                 <li><a href="./index.html">Inicio</a></li>
                 <li><a href="./index.html#/tienda">Colección</a></li>
                 <li><span>${product.name}</span></li>
             </ul>            
             `
-            productDetail.innerHTML=`
+      productDetail.innerHTML = `
             <div class="product__img">
             <img src=${product.img}>  
         </div>
@@ -52,9 +51,8 @@ window.addEventListener("load", async function () {
             </div>
         </div>
             `
-        });
-
-    } catch (error) {
-        console.error(error)
-    }
+    })
+  } catch (error) {
+    console.error(error)
+  }
 })
