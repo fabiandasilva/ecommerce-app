@@ -1,0 +1,77 @@
+.product {
+    @include flex(column, nowrap, center, center);
+    max-width: 114rem;
+    margin: auto;
+
+    @media (min-width: 992px) {
+        @include flex(row, nowrap, center, center);
+        padding-top: 5%;
+        max-width: 95%;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 114rem;
+    }
+
+    &__img {
+        width: 80%;
+
+        img {
+            width: 100%;
+        }
+
+        @media (min-width: 992px) {
+            width: 50%;
+        }
+    }
+
+    &__info {
+        @include flex(column, nowrap, center, flex-start);
+        width: 80%;
+        padding-top: 3rem;
+
+        @media (min-width: 992px) {
+            @include flex(column, nowrap, center, flex-start);
+            width: 50%;
+            padding-left: 5rem;
+            padding-top: 0;
+        }
+
+        p {
+            @include paragraph(black, left, 100%);
+
+            span {
+                @include highlight(flex-start);
+            }
+
+            ;
+        }
+
+        h1 {
+            @include title(black, left);
+            font-size: 2.5rem;
+            padding: .5rem 0;
+        }
+
+        strong {
+            @include subtitle(black, left);
+            font-size: 1.8rem;
+            width: 70%;
+
+            &:after {
+                content: "";
+                background-color: #dddddd;
+                display: block;
+                position: relative;
+                bottom: 0;
+                height: 1px;
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    .black-button {
+        @include button-text(black, 2rem, left);
+        padding-bottom: 0;
+    }
+}

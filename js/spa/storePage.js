@@ -1,14 +1,18 @@
+
+const API =
+    'https://6341a46e20f1f9d799773f24.mockapi.io/batuk/api/Batukapi'
+
 const renderCollection = () => {
-    //DOM VISTA STORE
-    const spa = document.getElementById('spa');
+  // DOM VISTA STORE
+  const spa = document.getElementById('spa')
 
-    /* DOM FILTRO ORDEN */
-    const storeSection = document.createElement('section');
-    storeSection.classList.add('store');
+  /* DOM FILTRO ORDEN */
+  const storeSection = document.createElement('section')
+  storeSection.classList.add('store')
 
-    const sortSection = document.createElement('section');
-    sortSection.classList.add('classification');
-    sortSection.innerHTML = `
+  const sortSection = document.createElement('section')
+  sortSection.classList.add('classification')
+  sortSection.innerHTML = `
     <h1>Productos</h1>
     <div class="classification__elements">
         <div id="products-quantity" class="quantity">
@@ -25,17 +29,17 @@ const renderCollection = () => {
             </select>
         </div>
     </div>
-`;
-    storeSection.appendChild(sortSection);
+`
+  storeSection.appendChild(sortSection)
 
-    /* DOM FILTROS "CATEGORIA, COLOR, PRECIO" */
+  /* DOM FILTROS "CATEGORIA, COLOR, PRECIO" */
 
-    const containerSection = document.createElement('section');
-    containerSection.classList.add('store__content');
+  const containerSection = document.createElement('section')
+  containerSection.classList.add('store__content')
 
-    const filterSection = document.createElement('aside');
-    filterSection.classList.add('filter');
-    filterSection.innerHTML = ` 
+  const filterSection = document.createElement('aside')
+  filterSection.classList.add('filter')
+  filterSection.innerHTML = ` 
     <form id="search-form">
         <input id="search-input" type="text" placeholder="Buscar..."/>
     </form>
@@ -64,25 +68,25 @@ const renderCollection = () => {
             <!-- filtro renderizados -->
         </div>
     </div>
-`;
-    containerSection.appendChild(filterSection);
+`
+  containerSection.appendChild(filterSection)
 
-    const collectionSection = document.createElement('section');
+  const collectionSection = document.createElement('section')
 
-    collectionSection.setAttribute('id', 'collection');
-    containerSection.append(collectionSection);
+  collectionSection.setAttribute('id', 'collection')
+  containerSection.append(collectionSection)
 
-    storeSection.appendChild(containerSection);
-    spa.appendChild(storeSection);
+  storeSection.appendChild(containerSection)
+  spa.appendChild(storeSection)
 
-    const renderContainer = document.getElementById('collection');
-    fetch("../../db/data.json")
-        .then((respuesta) => respuesta.json())
-        .then((data) => {
-            data.forEach((producto) => {
-                const card = document.createElement('div');
-                card.classList.add('card');
-                card.innerHTML = `   
+  const renderContainer = document.getElementById('collection')
+  fetch(API)
+    .then((respuesta) => respuesta.json())
+    .then((data) => {
+      data.forEach((producto) => {
+        const card = document.createElement('div')
+        card.classList.add('card')
+        card.innerHTML = `   
      
      <div class="overlay__item">
      <img src=${producto.img} alt="" class="overlay__item">
@@ -103,10 +107,10 @@ const renderCollection = () => {
      </div>
  </div>
      
-     `;
-                renderContainer.appendChild(card);
-            });
-        })
-};
+     `
+        renderContainer.appendChild(card)
+      })
+    })
+}
 
-export default renderCollection;
+export default renderCollection

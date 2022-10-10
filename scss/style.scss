@@ -7,24 +7,12 @@
 
 @import './components/_nav';
 @import './components/hero';
+@import "./components/product";
 
 @import './layout/_store';
 @import './components/_slider';
 @import "./components/_store";
 
-/* estilos para la entrega */
+ 
 
-.section {
-	@include flex(column, nowrap, space-between, center);
-
-	width: 100%;
-
-	h3,
-	p {
-		font-size: 2rem;
-	}
-	.formulario {
-		align-items: center;
-		font-size: 5rem;
-	}
-}
+ 

@@ -13,7 +13,7 @@ window.addEventListener('load', async function () {
       (product) => `?id=${product.id}` === urlID
     )
     singleProduct.forEach((product) => {
-      document.title = `${product.name.toUpperCase()} lalala`
+      document.title = `${product.name.toUpperCase()}`
 
       breadcrumbs.innerHTML = `
             <ul>
@@ -23,33 +23,19 @@ window.addEventListener('load', async function () {
             </ul>            
             `
       productDetail.innerHTML = `
-            <div class="product__img">
-            <img src=${product.img}>  
+    <div class="product__img">
+                <img src=${product.img}>  
         </div>
         <div class="product__info">
-            <p>#000${product.id} • <span>${
-        product.color
-    }<span></p>
+            <p>#000${product.id} • <span>${product.color}<span></p>
             <h1>${product.category} ${product.name}</h1>
             <strong>$${product.price}</strong>           
-            <div class="black-button" data-id="${product.id}">
+        <div class="black-button" data-id="${product.id}">
                 <button>Comprar</button>
-            </div>
-            <div class="product__service">
-                <i class="fas fa-shipping-fast"></i>
-                <div>
-                    <span>Envío Gratis</span>
-                    <p>Compras superiores a $2100.00</p>
-                </div>
-            </div>
-            <div class="product__service">
-                <i class="fas fa-sync"></i>
-                <div>
-                    <span>Cambios y Devoluciones</span>
-                    <p>30 días después de la compra</p>
-                </div>
-            </div>
         </div>
+            
+            
+    </div>
             `
     })
   } catch (error) {
