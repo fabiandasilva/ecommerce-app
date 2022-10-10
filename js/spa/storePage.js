@@ -1,7 +1,6 @@
 
 const API =
     'https://6341a46e20f1f9d799773f24.mockapi.io/batuk/api/Batukapi'
-
 const renderCollection = () => {
   // DOM VISTA STORE
   const spa = document.getElementById('spa')
@@ -78,7 +77,6 @@ const renderCollection = () => {
 
   storeSection.appendChild(containerSection)
   spa.appendChild(storeSection)
-
   const renderContainer = document.getElementById('collection')
   fetch(API)
     .then((respuesta) => respuesta.json())
@@ -99,7 +97,7 @@ const renderCollection = () => {
                      <i class="fas fa-cart-plus"></i>
                  </button>
              </div>
-         </div>
+             </div>
      </div>
      <div class="card__detail">
          <h3><a href="product.html?id=${producto.id}">${producto.category} ${producto.name}</a></h3>
@@ -111,6 +109,8 @@ const renderCollection = () => {
         renderContainer.appendChild(card)
       })
     })
+
+    .catch((error) => console.log(error))
 }
 
 export default renderCollection
