@@ -27,6 +27,19 @@
 	}
 	letter-spacing: 0.1rem;
 }
+@mixin titleHero($color, $align) {
+	color: $color;
+	font: {
+		size: 9.5rem;
+		weight: $extra-bold;
+	}
+	text: {
+		align: $align;
+		transform: uppercase;
+		decoration: none;
+	}
+	letter-spacing: 0.1rem;
+}
 
 // subtitulo
 

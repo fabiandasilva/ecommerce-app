@@ -19,7 +19,6 @@ const renderHome = () => {
       <h2>Novedades</h2>
       <div id="newIn">
      <!-- productos renderizados -->
-     <h2>Aca los productos novedosos </h2>
       </div>
   `
   spa.appendChild(newInSection)

@@ -11,9 +11,14 @@
 		padding: 0;
 	}
 
-	h2 {
+	h1 {
 		@include title($black, center);
-		padding: 5rem 0;
+		padding: 3.6rem 0;
+	}
+	h2 {
+		@include subtitle(black, center);
+		font-size: 2.5rem;
+		padding: 1.5rem 0;
 	}
 
 	.classification {
@@ -182,3 +187,4 @@
 		padding-bottom: 1rem;
 	}
 }
+ 

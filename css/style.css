@@ -44,8 +44,8 @@ footer a,
 footer p,
 footer span {
   color: black;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 400;
   letter-spacing: 0.1rem;
   text-decoration: none; }
 
@@ -105,7 +105,7 @@ header {
   padding: 8.9rem 0 0 8.9rem; }
   .hero h1 {
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 9.5rem;
     font-weight: 800;
     text-align: left;
     text-transform: uppercase;
@@ -230,6 +230,25 @@ header {
       background-color: transparent;
       cursor: pointer; }
 
+.breadcrumbs {
+  padding: 11.8rem 0 3rem 2.6rem; }
+  .breadcrumbs ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    align-items: center; }
+    .breadcrumbs ul a, .breadcrumbs ul span {
+      color: #979797;
+      font-size: 1.2rem;
+      font-weight: 800;
+      text-align: flex-start;
+      text-decoration: none;
+      letter-spacing: 0.05rem; }
+    .breadcrumbs ul a:after {
+      content: "/";
+      padding: 0 1rem; }
+
 .store {
   max-width: 114rem;
   margin: auto;
@@ -319,7 +338,7 @@ header {
   @media (min-width: 1200px) {
     .store {
       padding: 0; } }
-  .store h2 {
+  .store h1 {
     color: #000000;
     font-size: 3.6rem;
     font-weight: 800;
@@ -327,7 +346,17 @@ header {
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.1rem;
-    padding: 5rem 0; }
+    padding: 3.6rem 0; }
+  .store h2 {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    font-size: 2.5rem;
+    padding: 1.5rem 0; }
   .store .classification {
     display: none; }
     @media (min-width: 576px) {

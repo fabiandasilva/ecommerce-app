@@ -8,7 +8,7 @@
 	min-height: 100vh;
 	padding: 8.9rem 0 0 8.9rem;
 	h1 {
-		@include subtitle($white, left);
+		@include titleHero($white, left);
 	}
 
 	&__video {
