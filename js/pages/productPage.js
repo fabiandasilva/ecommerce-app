@@ -1,4 +1,5 @@
-const data = '../../db/data.json'
+import API from '../utilities/api.js'
+import card from '../utilities/card.js'
 
 const breadcrumbs = document.getElementById('breadcrumbs')
 const productDetail = document.getElementById('product-detail')
@@ -6,7 +7,7 @@ const productDetail = document.getElementById('product-detail')
 window.addEventListener('load', async function () {
   const urlID = this.window.location.search
   try {
-    const response = await this.fetch(data)
+    const response = await this.fetch(API)
     const products = await response.json()
 
     const singleProduct = products.filter(
@@ -37,6 +38,9 @@ window.addEventListener('load', async function () {
             
     </div>
             `
+
+      const novedades = products.filter((product) => product.newIn === true)
+      card(novedades, document.getElementById('new-in'))
     })
   } catch (error) {
     console.error(error)

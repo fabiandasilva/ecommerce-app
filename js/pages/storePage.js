@@ -1,6 +1,4 @@
-
-const API =
-    'https://6341a46e20f1f9d799773f24.mockapi.io/batuk/api/Batukapi'
+import API from '../utilities/api.js'
 const renderCollection = () => {
   // DOM VISTA STORE
   const spa = document.getElementById('spa')
@@ -84,8 +82,7 @@ const renderCollection = () => {
       data.forEach((producto) => {
         const card = document.createElement('div')
         card.classList.add('card')
-        card.innerHTML = `   
-     
+        card.innerHTML = `
      <div class="overlay__item">
      <img src=${producto.img} alt="" class="overlay__item">
          <div class="overlay__content">

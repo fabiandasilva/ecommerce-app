@@ -21,6 +21,7 @@ const renderHome = () => {
      <!-- productos renderizados -->
       </div>
   `
+
   spa.appendChild(newInSection)
 
   // DOM SLIDER

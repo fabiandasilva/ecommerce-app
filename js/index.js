@@ -1,6 +1,6 @@
-import renderCollection from './spa/storePage.js'
+import renderCollection from './pages/storePage.js'
 
-import renderHome from './spa/homePage.js'
+import renderHome from './pages/homePage.js'
 
 const spa = document.getElementById('spa')
 
