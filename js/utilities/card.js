@@ -21,7 +21,8 @@ const card = (products, element) => {
         <p>$${price}</p>
     </div>
     </div>
-</div>`
+</div>
+`
   })
 }
 

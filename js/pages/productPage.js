@@ -38,9 +38,9 @@ window.addEventListener('load', async function () {
             
     </div>
             `
-
       const novedades = products.filter((product) => product.newIn === true)
-      card(novedades, document.getElementById('new-in'))
+      card((novedades), document.getElementById('new-in'))
+      console.log(card)
     })
   } catch (error) {
     console.error(error)

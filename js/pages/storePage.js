@@ -1,4 +1,5 @@
 import API from '../utilities/api.js'
+import { filterCategory } from '../utilities/filters.js'
 const renderCollection = () => {
   // DOM VISTA STORE
   const spa = document.getElementById('spa')
@@ -103,6 +104,7 @@ const renderCollection = () => {
  </div>
      
      `
+        filterCategory(data)
         renderContainer.appendChild(card)
       })
     })
