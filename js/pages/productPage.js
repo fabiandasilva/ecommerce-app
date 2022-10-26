@@ -40,7 +40,7 @@ window.addEventListener('load', async function () {
             `
       const novedades = products.filter((product) => product.newIn === true)
       card((novedades), document.getElementById('new-in'))
-      console.log(card)
+      console.log(novedades)
     })
   } catch (error) {
     console.error(error)
