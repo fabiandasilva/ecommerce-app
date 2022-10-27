@@ -24,6 +24,7 @@ const card = (products, element) => {
     </div>
 `
   })
+    .join('')
 }
 
 export default card
