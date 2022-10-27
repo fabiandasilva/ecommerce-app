@@ -355,7 +355,7 @@ header {
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.1rem;
-    font-size: 2.5rem;
+    font-size: 5.5rem;
     padding: 1.5rem 0; }
   .store .classification {
     display: none; }
@@ -403,7 +403,8 @@ header {
       text-align: center;
       text-transform: uppercase;
       text-decoration: none;
-      letter-spacing: 0.1rem; }
+      letter-spacing: 0.1rem;
+      font-size: 4.6rem; }
     .store .classification__elements {
       display: flex;
       flex-direction: row;
@@ -435,7 +436,8 @@ header {
           display: inherit;
           padding-right: 2rem; } }
       .store__content .filter__type {
-        padding-bottom: 1.5rem; }
+        padding-bottom: 1.5rem;
+        font-size: 31px; }
         .store__content .filter__type span {
           color: black;
           font-size: 1.5rem;
@@ -446,16 +448,14 @@ header {
           letter-spacing: 0.1rem; }
         .store__content .filter__type form {
           padding: 1rem 0; }
-        .store__content .filter__type .filter__category,
-        .store__content .filter__type .filter__color {
+        .store__content .filter__type .filter__category {
           display: flex;
           flex-direction: column;
           flex-wrap: nowrap;
           justify-content: space-between;
           align-items: flex-start;
           padding: 0.5rem; }
-          .store__content .filter__type .filter__category button,
-          .store__content .filter__type .filter__color button {
+          .store__content .filter__type .filter__category button {
             color: black;
             font-size: 1.2rem;
             font-weight: 400;
@@ -468,6 +468,64 @@ header {
             background-color: transparent;
             border: none;
             padding: 0.5rem;
+            cursor: pointer; }
+        .store__content .filter__type .filter__price {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: left;
+          align-items: flex-start; }
+          .store__content .filter__type .filter__price input {
+            margin-bottom: 0; }
+          .store__content .filter__type .filter__price p {
+            color: black;
+            font-size: 1.2rem;
+            font-weight: 400;
+            text-align: left;
+            text-decoration: none;
+            letter-spacing: 0.1rem;
+            line-height: 1.5;
+            max-width: none; }
+    .store__content .filter {
+      display: none; }
+      @media (min-width: 576px) {
+        .store__content .filter {
+          display: inherit;
+          padding-right: 2rem; } }
+      .store__content .filter__type {
+        padding-bottom: 1.5rem;
+        font-size: 31px; }
+        .store__content .filter__type span {
+          color: black;
+          font-size: 1.5rem;
+          font-weight: 800;
+          text-align: left;
+          text-transform: uppercase;
+          text-decoration: none;
+          letter-spacing: 0.1rem; }
+        .store__content .filter__type form {
+          padding: 1rem 0; }
+        .store__content .filter__type .filter__color {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 0.5rem; }
+          .store__content .filter__type .filter__color button {
+            color: transparent;
+            font-size: 1.2rem;
+            font-weight: 400;
+            text-align: left;
+            text-decoration: none;
+            letter-spacing: 0.1rem;
+            line-height: 1.5;
+            max-width: none;
+            text-transform: capitalize;
+            background-color: transparent;
+            border: none;
+            padding: 0.5rem;
+            margin: 0.5rem;
             cursor: pointer; }
         .store__content .filter__type .filter__price {
           display: flex;

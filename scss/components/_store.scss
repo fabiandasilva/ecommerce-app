@@ -17,7 +17,7 @@
 	}
 	h2 {
 		@include subtitle(black, center);
-		font-size: 2.5rem;
+		font-size: 5.5rem;
 		padding: 1.5rem 0;
 	}
 
@@ -32,6 +32,7 @@
 
 		h1 {
 			@include title($black, center);
+			font-size: 4.6rem;
 		}
 
 		&__elements {
@@ -67,6 +68,7 @@
 
 			&__type {
 				padding-bottom: 1.5rem;
+				font-size: 31px;
 
 				span {
 					@include subtitle(black, left);
@@ -76,8 +78,7 @@
 					padding: 1rem 0;
 				}
 
-				.filter__category,
-				.filter__color {
+				.filter__category{
 					@include flex(column, nowrap, space-between, flex-start);
 					padding: 0.5rem;
 
@@ -87,7 +88,7 @@
 						background-color: transparent;
 						border: none;
 						padding: 0.5rem;
-						cursor: pointer;
+						cursor: pointer;	 
 					}
 				}
 
@@ -104,6 +105,56 @@
 				}
 			}
 		}
+		.filter {
+			display: none;
+
+			@media (min-width: 576px) {
+				display: inherit;
+				padding-right: 2rem;
+			}
+
+			&__type {
+				padding-bottom: 1.5rem;
+				font-size: 31px;
+
+				span {
+					@include subtitle(black, left);
+				}
+
+				form {
+					padding: 1rem 0;
+				}
+
+				.filter__color {
+					@include flex(row, wrap,flex-start,center);
+					padding: 0.5rem;
+				 
+
+					button {
+						@include paragraph(transparent, left, none);
+						text-transform: capitalize;
+						background-color: transparent;
+						border: none;
+						padding: 0.5rem;
+						margin: 0.5rem;
+						cursor: pointer;	 
+					}
+				}
+
+				.filter__price {
+					@include flex(column, nowrap, left, flex-start);
+
+					input {
+						margin-bottom: 0;
+					}
+
+					p {
+						@include paragraph(black, left, none);
+					}
+				}
+			}
+		}
+		 
 	}
 
 	#new-in,

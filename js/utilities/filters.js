@@ -21,4 +21,26 @@ const filterCategory = (data) => {
   })
 }
 
-export { filterCategory }
+const filterColors = (data) => {
+  const categories = ['Todos', ...new Set(data.map((product) => product.color))]
+  const categoriesDOM = document.getElementById('colors')
+  categoriesDOM.innerHTML = categories.map((color) => {
+    return `<button class="color-button" style="width: 30px; height: 30px;background-color:${color};
+    border:1px solid black;border-radius:50%;">${color}</button>`
+  })
+    .join('')
+  categoriesDOM.addEventListener('click', function (e) {
+    const element = e.target
+    if (element.classList.contains('color-button')) {
+      let colorStore = []
+      if (element.textContent === 'Todos') {
+        colorStore = [...data]
+      } else {
+        colorStore = data.filter((product) => product.color === e.target.textContent)
+      }
+      card(colorStore, document.getElementById('collection'))
+    }
+  })
+}
+
+export { filterColors, filterCategory }
