@@ -1,5 +1,5 @@
 import API from '../utilities/api.js'
-import { filterCategory, filterColors } from '../utilities/filters.js'
+import { filterCategory, filterColors, filterPrice } from '../utilities/filters.js'
 const renderCollection = () => {
   // DOM VISTA STORE
   const spa = document.getElementById('spa')
@@ -15,17 +15,7 @@ const renderCollection = () => {
     <div class="classification__elements">
         <div id="products-quantity" class="quantity">
             <!-- cantidad renderizada -->
-        </div>
-        <div>
-            <label>Ordenar por</label>
-            <select id="sort">
-                <option value="Más relevantes">Más relevantes</option>
-                <option value="A - Z">A - Z</option>
-                <option value="Z - A">Z - A</option>
-                <option value="Menor precio">Menor precio</option>
-                <option value="Mayor precio">Mayor precio</option>
-            </select>
-        </div>
+        </div>        
     </div>
 `
   storeSection.appendChild(sortSection)
@@ -37,10 +27,7 @@ const renderCollection = () => {
 
   const filterSection = document.createElement('aside')
   filterSection.classList.add('filter')
-  filterSection.innerHTML = ` 
-    <form id="search-form">
-        <input id="search-input" type="text" placeholder="Buscar..."/>
-    </form>
+  filterSection.innerHTML = `      
     <div class="filter__type">
         <span>Categoría</span>
         <div id="categories" class="filter__category">
@@ -106,6 +93,8 @@ const renderCollection = () => {
      `
         filterCategory(data)
         filterColors(data)
+        filterPrice(data)
+
         renderContainer.appendChild(card)
       })
     })

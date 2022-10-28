@@ -28,7 +28,10 @@ window.addEventListener('load', async function () {
                 <img src=${product.img}>  
         </div>
         <div class="product__info">
-            <p>#000${product.id} • <span>${product.color}<span></p>
+            <p>#0A${product.id}50</p>
+            <p>Color: <button class="color-button" style="width: 20px; height: 20px;background-color:${product.color};
+            border:1px solid #B5B2B2;border-radius:50%;color: transparent;">${product.color}</button></p>
+            <p>Tamaños: ${product.size}</p>
             <h1>${product.category} ${product.name}</h1>
             <strong>$${product.price}</strong>           
         <div class="black-button" data-id="${product.id}">
