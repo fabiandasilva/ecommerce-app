@@ -1,66 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script
-			src="https://kit.fontawesome.com/aab291df05.js"
-			crossorigin="anonymous"
-		></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/aab291df05.js"
+      crossorigin="anonymous"
+    ></script>
 
-		<link rel="stylesheet" href="./css/style.css" />
-		<title>Batuk</title>
-	</head>
-	<body>
-		<!-- APERTURA HEADER -->
-		<header>
-			<nav class="navbar">
-				<ul class="navbar__info">
-					<li>
-						<a href="#/"><i class="fas fa-home"></i>Home</a>
-					</li>
-					<li>
-						<a href="#/tienda"><i class="fas fa-shopping-bag"></i>Productos</a>
-					</li>
-				</ul>
-				<a href="#/"
-					><img src="./assets/img/logo.svg" alt="Batuk"
-				/></a>
-				<ul class="navbar__icons">
-					<li id="toggle-form-btn" class="navbar__user">
-						<i class="far fa-paper-plane"></i>
-						<span id="greeting"></span>
-					</li>
-					<li id="toggle-cart" class="navbar__cart">
-						<i class="fas fa-shopping-cart"></i>
-						<span id="cart-item-count"></span>
-					</li>
-				</ul>
-			</nav>
-		</header>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Batuk</title>
+  </head>
+  <body>
+    <!-- APERTURA HEADER -->
+    <header>
+      <nav class="navbar">
+        <ul class="navbar__info">
+          <li>
+            <a href="#/"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href="#/tienda"><i class="fas fa-shopping-bag"></i>Store</a>
+          </li>
+        </ul>
+        <a href="#/"><img src="./assets/img/logo.svg" alt="Batuk" /></a>
+        <ul class="navbar__icons">
+          <li id="toggle-form-btn" class="navbar__user">
+            <i class="far fa-paper-plane"></i>
+            <span id="greeting"></span>
+          </li>
+          <li id="toggle-cart" class="navbar__cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-item-count">0</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-		<!-- APERTURA MAIN -->
-		<main id="spa">
-			<!-- contenido renderizado (single page application) -->
-			<section class="catalogo">
-				<h2>Listado de muebles</h2>
-				<form class="buscador">
-					<h3>Buscar artículo:</h3>
-					<input type="text" name="texto" placeholder="Nombre" />
-					<button id="BotonBuscar">Buscar</button>
-				</form>
-				<ul id="Productos"></ul>
-			</section>
+    <!-- APERTURA CART -->
+    <aside id="cart-overlay" class="cart">
+      <i id="close-cart" class="fas fa-times close"></i> 
+      <h2>Tu carrito</h2>
+      <div id="cart-items"></div>
+      <div id="cart-total" class="cart__price"></div>
+      <div class="cart__checkout">
+        <button id="checkout" class="black-button">Finalizar compra</button>
+      </div>
+    </aside>
+    <!-- CIERRE CART -->
+    <section id="notifications" class="notifications-index">
+      <!-- contenido renderizado (formularios) -->
+    </section>
+    <!-- APERTURA MAIN -->
+    <main id="spa">
+      <!-- contenido renderizado (single page application) -->
+    </main>
 
-			<aside class="carrito">
-				<h2>Carrito</h2>
-				<ul id="Carrito"></ul>
-			</aside>
-		</main>
-
-		<!-- CIERRE MAIN -->
-		<!--! ↧ ↧ ↧ ↧  con este js tengo problemas al renderizar los productos  ↧ ↧ ↧ ↧ -->
-		<script type="module" src="./js/index.js"></script>
-	</body>
+    <!-- CIERRE MAIN -->
+    <script type="module" src="./js/index.js"></script>
+  </body>
 </html>

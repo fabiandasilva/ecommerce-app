@@ -1,5 +1,5 @@
 import renderCollection from './pages/storePage.js'
-
+import './cart/toggle.js'
 import renderHome from './pages/homePage.js'
 
 const spa = document.getElementById('spa')

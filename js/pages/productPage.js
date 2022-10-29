@@ -1,5 +1,6 @@
 import API from '../utilities/api.js'
 import card from '../utilities/card.js'
+import '../cart/toggle.js'
 
 const breadcrumbs = document.getElementById('breadcrumbs')
 const productDetail = document.getElementById('product-detail')
@@ -43,7 +44,6 @@ window.addEventListener('load', async function () {
             `
       const novedades = products.filter((product) => product.newIn === true)
       card((novedades), document.getElementById('new-in'))
-      console.log(novedades)
     })
   } catch (error) {
     console.error(error)
