@@ -1,18 +1,10 @@
 /* eslint-disable no-return-assign */
 /* eslint-disable eqeqeq */
-/// ////////////////////////
-// FUNCIONES DEL CARRITO //
-/// ////////////////////////
 
-// IMPORTS ESPECIFICOS
-
-import addToCartDOM from './items.js'
-import { getStorageItem, setStorageItem } from '../utilities/utils.js'
-import { openCart } from './toggle.js'
 import { findProduct } from '../utilities/store.js'
-
-// DECLARAR VARIABLES
-
+import { getStorageItem, setStorageItem } from '../utilities/utils.js'
+import addToCartDOM from './items.js'
+import { openCart } from './toggle.js'
 const cartItemCountDOM = document.getElementById('cart-item-count')
 const cartItemsDOM = document.getElementById('cart-items')
 const cartTotalDOM = document.getElementById('cart-total')
@@ -78,7 +70,6 @@ function displayCartItemsDOM () {
 // BORRAR ITEM
 
 function removeItem (id) {
-  // eslint-disable-next-line eqeqeq
   cart = cart.filter((cartItem) => cartItem.id != id)
 };
 
@@ -136,7 +127,6 @@ function setupCartFunctionality () {
 
     if (parent.classList.contains('cart-item-decrease-btn')) {
       const newAmount = decreaseAmount(parentID)
-      // eslint-disable-next-line eqeqeq
       if (newAmount == 0) {
         removeItem(parentID)
         parent.parentElement.parentElement.parentElement.remove()

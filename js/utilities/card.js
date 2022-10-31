@@ -10,11 +10,8 @@ const card = (products, element) => {
             <div class="overlay__content">
                 <div class="overlay__buttons">
                     <a href="product.html?id=${id}">
-                        <i class="fas fa-search"></i>
-                    </a>
-                    <button class="overlay__cart" data-id="${id}">
-                        <i class="fas fa-cart-plus"></i>
-                    </button>
+                        <i class="fas fa-eye"></i>
+                    </a>                   
                 </div>
                 </div>
         </div>

@@ -5,6 +5,6 @@
 
 [Deploy](https://batuk.netlify.app/) | [Repositorio](https://github.com/fabiandasilva/ecommerce-app)
 
-<p align="center"><img src="/assets/img/screen.png" margin="auto"></p>
+<p align="center"><img src="/assets/img/index/screen.png" margin="auto"></p>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/30c8e842-7023-4dc8-a33b-122f2a25a2ae/deploy-status)](https://app.netlify.com/sites/batuk/deploys)

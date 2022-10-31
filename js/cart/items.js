@@ -7,7 +7,7 @@ const addToCartDOM = ({ id, name, price, category, color, amount, img }) => {
   div.setAttribute('data-id', id)
   div.innerHTML = `
         <div class="item__image">
-            <img src=${img}>
+            <img src=${img} alt=${name}-${color}>
         </div>
         <div class="item__data">
             <i class="far fa-trash-alt item__bin" data-id="${id}"></i>

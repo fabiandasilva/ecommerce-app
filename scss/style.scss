@@ -11,19 +11,12 @@
 @import "./components/cart";
 
 @import './layout/_store';
+@import "./layout/footer";
 @import './components/_slider';
 @import "./components/_store";
 
  
-
-nav, footer {
-    button { 
-        color: white; 
-        background-color: transparent;
-        border: none;
-        font: { size: 1.2rem; weight: 400; }
-        text-transform: uppercase;
-        letter-spacing: .1rem;
-        padding: 1rem;
-    }
-}
+ .toast{
+    width: 200px;
+    font-size: 17px;
+ }

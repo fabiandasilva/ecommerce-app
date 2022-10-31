@@ -1,0 +1,14 @@
+ 
+
+footer {
+    @include flex(row, nowrap,  flex-end, center);
+    background-color: white;
+    border-top: 1px solid white;
+    padding: 2rem;
+    margin-top: 3rem;
+    height:100px;
+
+     i { padding: .5rem;
+    width: 100px;
+height: 100px; }
+}
