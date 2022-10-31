@@ -1,6 +1,7 @@
-import API from '../utilities/api.js'
+import API from '../service/api.js'
 import card from '../utilities/card.js'
 import '../cart/toggle.js'
+import { addToCart } from '../cart/functions.js'
 
 const breadcrumbs = document.getElementById('breadcrumbs')
 const productDetail = document.getElementById('product-detail')
@@ -47,5 +48,13 @@ window.addEventListener('load', async function () {
     })
   } catch (error) {
     console.error(error)
+  }
+})
+productDetail.addEventListener('click', function (e) {
+  const parent = e.target.parentElement
+  const parentID = e.target.parentElement.dataset.id
+
+  if (parent.classList.contains('black-button')) {
+    addToCart(parentID)
   }
 })

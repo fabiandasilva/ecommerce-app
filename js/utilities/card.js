@@ -1,3 +1,5 @@
+import { addToCart } from '../cart/functions.js'
+
 const card = (products, element) => {
   element.innerHTML = products.map((product) => {
     const { id, name, price, img, category } = product
@@ -25,6 +27,13 @@ const card = (products, element) => {
 `
   })
     .join('')
+
+  element.addEventListener('click', function (e) {
+    const parent = e.target.parentElement
+    if (parent.classList.contains('overlay__cart')) {
+      addToCart(parent.dataset.id)
+    }
+  })
 }
 
 export default card

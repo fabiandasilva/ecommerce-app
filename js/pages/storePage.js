@@ -1,4 +1,4 @@
-import API from '../utilities/api.js'
+import API from '../service/api.js'
 import { filterCategory, filterColors, filterPrice } from '../utilities/filters.js'
 const renderCollection = () => {
   // DOM VISTA STORE
