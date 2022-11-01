@@ -15,8 +15,7 @@ const renderHome = () => {
   /* DOM VISTA NOVEDADES */
   const newInSection = document.createElement('section')
   newInSection.classList.add('store')
-  newInSection.innerHTML = `
-      <h2>Novedades</h2>
+  newInSection.innerHTML = ` 
       <div id="newIn">
      <!-- productos renderizados -->
       </div>
@@ -29,7 +28,7 @@ const renderHome = () => {
   const sliderSection = document.createElement('section')
   sliderSection.classList.add('slider')
   sliderSection.innerHTML = `
-    <h2>Descubrí la colección</h2>
+    <h2 >Descubrí la nueva colección</h2>
     <div class="slider__slide">
    <img src="../../assets/img/index/slide.png" alt="Nueva temporada">
    <div class="overlay__content">
