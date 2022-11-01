@@ -1,3 +1,5 @@
+/* eslint-disable eqeqeq */
+/* eslint-disable prefer-const */
 import { getStorageItem, setStorageItem } from './utils.js'
 
 // DECLARAR VARIABLE
@@ -14,7 +16,7 @@ const setupStore = (products) => {
 
 // ENCONTRAR UN PRODUCTO
 const findProduct = (id) => {
-  const product = store.find((product) => product.id === id)
+  let product = store.find((product) => product.id == id)
   return product
 }
 export { store, setupStore, findProduct }

@@ -21,7 +21,7 @@ window.addEventListener('load', async function () {
       breadcrumbs.innerHTML = `
             <ul>
                 <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./index.html#/tienda">Colección</a></li>
+                <li><a href="./index.html#/tienda">Store</a></li>
                 <li><span>${product.name}</span></li>
             </ul>            
             `
@@ -56,5 +56,6 @@ productDetail.addEventListener('click', function (e) {
 
   if (parent.classList.contains('black-button')) {
     addToCart(parentID)
+    /*  console.log(parentID) */
   }
 })
