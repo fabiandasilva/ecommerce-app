@@ -239,3 +239,36 @@
 	}
 }
  
+.thanks-message {
+    @include flex(column, nowrap, center, center);
+    display: none;
+    background-color: white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3rem;
+    z-index: 3;
+
+    h2 { 
+        @include subtitle(black, center); 
+        font-size: 1.8rem;
+    }
+
+    p { 
+        @include paragraph(black, center, none); 
+        width: 28rem;
+        padding-top: 1rem;
+    }
+
+    a { 
+        @include highlight(center);
+        width: 28rem;
+        padding-top: 1rem;
+        text-transform: uppercase;
+    }
+
+    .message-button { @include button-text(black, 1.2rem, center); }
+
+    &__show { display: flex; }
+}
