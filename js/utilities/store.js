@@ -21,7 +21,7 @@ function findStoreAndFilterApi () {
         return { id, name, price, category, color, img }
       })
 
-      console.log(store)
+      /* console.log(store) */
     })
     .catch((err) => console.log(err))
 }
