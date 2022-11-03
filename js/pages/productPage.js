@@ -44,7 +44,7 @@ window.addEventListener('load', async function () {
     </div>
             `
       const novedades = products.filter((product) => product.newIn === true)
-      card((novedades), document.getElementById('new-in'))
+      card(novedades, document.getElementById('new-in'))
     })
   } catch (error) {
     console.error(error)
@@ -56,6 +56,5 @@ productDetail.addEventListener('click', function (e) {
 
   if (parent.classList.contains('black-button')) {
     addToCart(parentID)
-    /*  console.log(parentID) */
   }
 })

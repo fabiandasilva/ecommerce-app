@@ -15,8 +15,10 @@ let cart = getStorageItem('cart')
 
 export const addToCart = (id) => {
   const item = cart.find((cartItem) => cartItem.id == id)
+  console.log(item)
   if (!item) {
     let product = findProduct(id)
+    console.log(product)
     product = { ...product, amount: 1 }
     cart = [...cart, product]
     addToCartDOM(product)
