@@ -11,7 +11,6 @@ const renderCollection = () => {
   const sortSection = document.createElement('section')
   sortSection.classList.add('classification')
   sortSection.innerHTML = `
-    <h1>Productos</h1>
     <div class="classification__elements">
         <div id="products-quantity" class="quantity">
             <!-- cantidad renderizada -->
